@@ -3,7 +3,7 @@
  * solving algorithm!
  */
 
-export function checkGuess(guess, answer) {
+export function checkGuess({guess, answer}) {
   // This constant is a placeholder that indicates we've successfully
   // dealt with this character (it's correct, or misplaced).
   const SOLVED_CHAR = '✓';
@@ -11,7 +11,6 @@ export function checkGuess(guess, answer) {
   if (!guess) {
     return null;
   }
-
   const guessChars = guess.toUpperCase().split('');
   const answerChars = answer.split('');
 

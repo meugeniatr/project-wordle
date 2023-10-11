@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const WordInput = ({ handleSubmitGuess }) => {
+const WordInput = ({ handleSubmitGuess, disabled }) => {
   const [tentativeGuess, setTentativeGuess] = useState("");
 
   const handleSubmit = (event) => {
@@ -17,7 +17,7 @@ const WordInput = ({ handleSubmitGuess }) => {
         handleSubmit(event);
       }}
     >
-      <label for="guess-input">Enter guess:</label>
+      <label htmlFor="guess-input">Enter guess:</label>
       <input
         required
         id="guess-input"
@@ -30,6 +30,7 @@ const WordInput = ({ handleSubmitGuess }) => {
         }
         pattern="[a-zA-Z]{5}"
         title="5 letter word"
+        disabled={disabled}
       />
     </form>
   );

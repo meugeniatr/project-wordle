@@ -80,7 +80,7 @@ h1 {
   padding: var(--game-spacing) 32px;
   margin: 0 auto;
   min-width: 250px;
-  max-width: min(500px, 58vh, 100%);
+  max-width: min(500px, 60vh, 100%);
 }
 
 .guess-results {
